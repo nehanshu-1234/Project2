@@ -1,0 +1,246 @@
+{% extends 'base.html' %}
+{% block 'content' %}
+{% load static %}
+
+<div class="container pt-5" style="background-color : #F1CFAD">
+
+<link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <!--Carousel-->
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static 'images/instagram/pho4.jpg' %}" class="d-block w-100 pic" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'images/instagram/pho3.jpg' %}" class="d-block w-100 pic" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'images/instagram/pho1.jpg' %}" class="d-block w-100 pic" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <!--Container-->
+      <div class="container" >
+        <h1 class="text-center p-5 mb-5 mt-5">What is Mindfulness</h1>
+
+        <div class="w=100 bg-dr ">
+          <p class=" para w-100  p-5 mb-5  para" style="background-color : #502D1B;color: white;line-height:30px;box-shadow: 5PX 5PX 10PX rgba(0,0,0,0.3);"> Mindfulness. It’s a pretty straightforward word. It suggests that the mind is fully attending to what’s happening, to what you’re doing, to the space you’re moving through. That might seem trivial, except for the annoying fact that we so often veer from the matter at hand. Our mind takes flight, we lose touch with our body, and pretty soon we’re engrossed in obsessive thoughts about something that just happened or fretting about the future. And that makes us anxious.
+
+            Mindfulness is the basic human ability to be fully present, aware of where we are and what we’re doing, and not overly reactive or overwhelmed by what’s going on around us.</p>
+        </div>
+
+        <h2 id="learn" class="fs-1 p-5 mt-5 mb-5 text-center">8 limbs of yoga</h2>
+
+        <!--row1-->
+
+        <div class="row">
+          <div class="col">
+            <!--card 1-->
+            <div class="card custom-card h-100 w-100">
+              <img src="{% static 'images/blog/a1.jpg' %}" class="card-img-top" height=300 width="300" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Yama</h5>
+                <p class="card-text">Yama (Restraints): The ethical principles governing one's behavior. They include Ahimsa (non-violence), Satya (truthfulness), Asteya (non-stealing), Brahmacharya (celibacy or right use of energy), and Aparigraha (non-possessiveness).</p>
+               </div>
+            </div>
+          </div>
+            <!--card2-->
+          <div class="col-md-3">
+            <div class="card custom-card h-100 w-100" >
+              <img src="{% static 'images/blog/a2.jpg' %}" class="card-img-top"height=300 width="300" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Niyama</h5>
+                <p class="card-text">Niyama (Observances): Personal observances for self-discipline and spiritual growth. They include Saucha (cleanliness), Santosha (contentment), Tapas (discipline), Svadhyaya (self-study), and Ishvara Pranidhana (surrender to a higher power).</p>
+              </div>
+            </div>
+            </div>
+           <!--card3-->
+           <div class="col-md-3">
+           <div class="card custom-card h-100 w-100" >
+            <img src="{% static 'images/blog/a3.jpg' %}" class="card-img-top" height=300 width="300"alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Asanas</h5>
+              <p class="card-text">
+                Asana (Postures): The physical practice of yoga postures to attain physical health, steadiness, and comfort for meditation. Asanas are designed to prepare the body for prolonged meditation.
+                </p>
+            </div>
+          </div>
+          </div>
+          
+          <!--card4-->
+          <div class="col-md-3">
+            <div class="card custom-card h-100 w-100" >
+             <img src="{% static 'images/blog/A4.jpg' %}" class="card-img-top" height=300 width="300" alt="...">
+             <div class="card-body">
+               <h5 class="card-title">Pranayama </h5>
+               <p class="card-text">Pranayama (Breath Control): The regulation and extension of breath. Pranayama practices enhance the flow of life force energy (prana) and help prepare the mind for meditation.</p>
+             </div>
+           </div>
+           </div>
+        </div>
+
+           <!--row2-->
+          <div class="row pt-5">
+            
+            <!--card5 -->
+            <div class="col">
+              
+              <div class="card custom-card h-100 w-100 ">
+                <img src="{% static 'images/blog/A5.jpeg' %}" class="card-img-top" height=300 width="300" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Pratyahara</h5>
+                  <p class="card-text">Pratyahara (Withdrawal of Senses): The conscious withdrawal of the senses from external stimuli, turning attention inward. This stage prepares the mind for deeper concentration and meditation</p>
+                </div>
+              </div>
+            </div>
+            <!-- card6-->
+            <div class="col">
+              
+              <div class="card custom-card h-100 w-100">
+                <img src="{% static 'images/blog/A6.jpg' %}" class="card-img-top" height=300 width="300" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Dharana</h5>
+                  <p class="card-text">Dharana (Concentration): Focused attention on a single point or object. Concentration helps the mind become steady and one-pointed, paving the way for meditation.</p>
+                </div>
+              </div>
+            </div>
+            <!-- card7-->
+            <div class="col">
+              
+              <div class="card custom-card h-100 w-100">
+                <img src="{% static 'images/blog/A7.jpg' %}" class="card-img-top"  height=300 width="300"  alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Dhyana</h5>
+                  <p class="card-text">Dhyana (Meditation): Sustained concentration leads to meditation. In this stage, the meditator experiences a continuous flow of awareness without distraction.</p>
+                </div>
+              </div>
+            </div>
+               <!-- card8-->
+
+               <div class="col">
+              
+                <div class="card custom-card h-100 w-100">
+                  <img src="{% static 'images/blog/A8.jpeg' %}" class="card-img-top"  height=300 width="300" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Samadhi</h5>
+                    <p class="card-text">Samadhi (Union): The ultimate goal of yoga, where the meditator achieves a state of oneness with the object of meditation, experiencing pure consciousness. Samadhi is a state of profound joy, peace, and spiritual realization.</p>
+                    </div>
+                </div>
+              </div>
+
+          </div>
+
+          <!--Anout Us-->
+          <h2 id="about" class="fs-1 p-5 mt-5 mb-5 text-center">About Us</h2>
+          
+          <div class="row">
+
+            <div class="col-md-6 h-700 ">
+              <div class="custom-background text-white p-5 mt-5 mb-5">
+                <h2>Who we are</h2>
+                <p>
+                   The Organisation propagates the authentic teaching of yoga and vedanta, continuing the lineage of the two great yoga masters, preserving its purity and tradition dating back several thousand years. Their message that the individual must change before the world can change is at the core of all yoga. We are a centre for spiritual growth and learning, with many thousands of yoga teachers worldwide trained since 1963.
+
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 h-700 ">
+              <div class="custom-background1  p-5 mt-5 mb-5">
+                <h2>Yoga Vacation</h2>
+                <p>
+                   Join our Yoga Vacation programme, designed by Swami Vishnudevananda and offered in our beautiful Ashrams around the world. Daily yoga and meditation sessions, healthy vegetarian food, inspiring spiritual teachings with like-minded people in an idyllic setting bring mental and physical relaxation and spiritual growth. We are open year-round and we welcome all.
+                </p>
+              </div>
+            </div>
+            <!--col2-->
+            <div class="col-md-6 h-700">
+              <div class="custom-background1 p-5 mt-5 mb-5">
+                <h2>Yoga Teacher Training</h2>
+                <p>
+                  
+                Gain a solid foundation in the classical yoga tradition in our life-transforming residential courses held at our Ashrams worldwide. You will awaken and strengthen your own yoga practice as well as build a firm foundation in classical yoga from which to teach others instinctively and confidently connecting to a tradition and lineage passed down through millennia.
+                </p>
+              </div>
+            </div>
+
+            <!--3-->
+            <!--col2-->
+            <div class="col-md-6 h-700">
+              <div class="custom-background text-white p-5 mt-5 mb-5">
+                <h2>Ayurveda</h2>
+                <p>
+                  Personalised therapies and detoxification programmes that are based on the understanding of each individual’s constitution using herbal medicines and oils, diet, exercise and lifestyle regimens, to bring health and harmony to body and mind. Our Ashrams offer an extensive range of workshops, retreats, training programmes and certification courses on the science of Ayurveda
+                  
+                </p>
+              </div>
+            </div>
+
+
+          </div>
+           <!--row end-->
+
+       
+        <h2 id="practice" class="fs-1 pt-5 mt-5  text-center">Practice yoga and find your inner peace.</h2>
+        <hr>
+        <div class="row">
+            <div class="col-md-6">
+                <video src="{% static 'images/yoga.mp4' %}" width="560" height="315"  class=text-center controls></video>
+
+            </div>
+            <div class="col-md-6">
+                <video src="{% static 'images/video.mp4' %}" width="560" height="315"  class=text-center controls></video>
+
+            </div>
+        </div>
+
+
+
+        
+
+
+
+       
+       
+       
+       
+        </div>
+      </div>
+        
+
+
+
+      
+
+      <!--End of Container-->
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <!--end of container-->
+
+ </div>
+
+
+
+
+
+
+
+ 
+{% endblock 'content' %}

@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block 'content' %}
+{% load static %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar navbar-expand-lg bg-dark ">
+                    <div class="container-fluid">
+                     
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav  mb-2 mb-lg-0 justify-content-between" style="width: 100%;">
+                          <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/yogaessentials/" style="color: #ffffff;">Yoga Essentials </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/clothing/" style="color: #ffffff;">Clothing</a>
+                          </li>
+                          
+                          <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/food/" style="color: #ffffff;">Food</a>
+                          </li>
+                          
+                          <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/blog/" style="color: #ffffff;">Blog</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/books/" style="color: #ffffff;">Books</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/bodycare/" style="color: #ffffff;">Bodycare</a>
+                          </li>
+                          
+                        </ul>
+                      </div>
+                    </div>
+                  
+            </div>
+        
+        </div>
+
+        <!--product-->
+        <div class="row">
+            {% for i in Products %}
+            <div class="col-md-4">
+                
+                <div class="card" style="width: 18rem;">
+                    <img src="{{i.pimage.url}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">{{i.name}}</h5>
+                      <a href="/productdetail/{{i.id}}"><p class="card-text">{{i.pdetails}}</p></a>
+                      <div>Rs.{{i.price}}</div>
+                      <a href="#" class="btn btn-primary">Add to Cart</a>
+
+
+                      
+
+                      
+                    </div>
+                  </div>
+            </div>
+            {% endfor %}
+        </div>
+    
+
+
+
+    </div>
+ 
+
+    {% endblock 'content' %}

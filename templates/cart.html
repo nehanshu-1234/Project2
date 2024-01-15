@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block 'content' %}
+{% load static %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+
+      <div class="container mt-5">
+        <div class="row">
+           <div class="col-md-12">
+          
+        <h2>Your Shopping Cart</h2>
+        
+        <table class="table">
+          <thead>
+            <tr>
+              <th>product
+            </th>
+
+              <th>Name</th>
+      
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Remove</th>
+            </tr>
+          </thead>
+          {% for product in products %}
+          <tbody>
+            <tr>
+              <td><img class="img-fluid " src="{{product.pid.pimage.url}}" height="100" width="200" alt="">
+              </td>
+              <td> {{product.pid.name}}</td>
+              <td> {{product.pid.price}}</td>
+              <td>
+                <a href="/updateqty/0/{{product.id}}"><button  class =btn style="background-color: #AD430E; color: white;">-</button></a>
+                <input type="number" value="{{product.quantity}}">
+                <a href="/updateqty/1/{{product.id}}"><button class =btn style="background-color: #DB8055; color: white;">+</button></a>
+               
+                <td><a href="/remove/{{product.id}}" style="color: black;"><i class="bi bi-trash"></i></a></td>
+            </tr>
+            <!-- Add more rows for additional products -->
+          </tbody>
+          {% endfor %}
+
+        </table>
+        <div class="text-right">
+          <h4>Total:{{sum}}</h4>
+          
+
+          <a href="/placeorder" style="text-decoration: none;"><button class="form-control" style="background-color: #AD430E; color: white;">Place Order</button></a>
+        </div>
+      </div>
+      </div>
+      </div>
+      
+
+
+{% endblock 'content' %}

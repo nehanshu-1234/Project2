@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block 'content' %}
+{% load static %}
+    <div class="container"  style="background-color : #F1CFAD">
+      
+        <div class="row">
+          <div class="col-md-8 mt-5 mx-auto">
+            <div class="row">
+              <div class="col-md-6" style="margin-left: 0px; padding-left: 0px;">
+                <img src="{{product.pimage.url}}" class="img-fluid  " alt="...">
+              </div>
+              <div class="col-md-6">
+                <h3 style="font-weight: bold;">Product Name:<h4 style="font-weight: lighter;"> {{product.name}}</h4> </h3>
+                <hr>
+                <h3 style="font-weight: bold;">Price:<h4 style="font-weight: lighter;"> {{product.price}}</h4> </h3>
+                <hr>
+                <h3 style="font-weight: bold;">Product Description: <h4 style="font-weight: lighter;">{{product.pdetails}}</h4> </h3>
+                <hr>
+             <a href="/addtocart/{{product.id}}" style="text-decoration: none; color: white; font-weight: bolder;"> <button class="form-control mb-5" style="background-color: #AD430E;color: white;">Add to <i class="bi bi-cart2"></i></button></a>
+             <a href="/viewcart" style="text-decoration: none; color: white; font-weight: bolder;"> <button class="form-control" style="background-color: #AD430E; color: white;"> view <i class="bi bi-cart2"></i></button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+            {% endblock 'content' %}

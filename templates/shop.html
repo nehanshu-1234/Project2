@@ -1,0 +1,63 @@
+
+
+     {% extends 'base.html' %}
+     {% block 'content' %}
+     {% load static %}
+     <div class="container" style="background-color: #F5DEB3;">
+           <div class="row">
+             <div class="col-md-3 mt-5  p-3" style="background-color: #DEAA88;">
+               <h5>Filter by Category</h5>
+               <hr />
+               <p><a href="/shop/"  style="text-decoration: none;color: #7A3803;">All</a></p>
+               <p><a href="/catfilter/1" style="text-decoration: none;color: #7A3803;">By Yoga Essentials</a></p>
+               <p><a href="/catfilter/2"  style="text-decoration: none;color: #7A3803;">By Clothing</a></p>
+               <p><a href="/catfilter/4"  style="text-decoration: none;color: #7A3803;">By Food</a></p>
+               <p><a href="/catfilter/5"  style="text-decoration: none;color: #7A3803;">By Bodycare</a></p>
+               <p><a href="/catfilter/6"  style="text-decoration: none;color: #7A3803;">By Books</a></p>
+               <h5>Filter by Price</h5>
+               <hr />
+               <form action="/range" method="POST">
+                 {% csrf_token %}
+                 <div class="mb-3">
+                   <label class="form-label" for="">MIN: </label>
+                   <input name="min" class="form-control" type="number" />
+                 </div>
+                 <div class="mb-3">
+                   <label class="form-label" for="">MAX: </label>
+                   <input name="max" class="form-control" type="number" />
+                 </div>
+                 <div class="mb-3">
+                   <input class=" form-control" type="submit" value="Search"  style="background-color: #502D1B; color: white;"/>
+                 </div>
+               </form>
+               <h5>Sort by Price</h5>
+               <hr />
+               <p><a href="/sort/0"  style="text-decoration: none;color: #7A3803;">High to Low</a></p>
+               <p><a href="/sort/1"  style="text-decoration: none;color: #7A3803;">Low to High</a></p>
+             </div>
+             <div class="col-md-9 mt-5">
+               <div class="row mt-5">
+                 {% for product in Products %}
+                 <div class="col-md-4 mb-5">
+                   <div class="card h-100 w-100 ">
+                     <img
+                       src="{{product.pimage.url}}"
+                       class="card-img-top" height=300 width="300"
+                       alt="..."
+                     />
+                     <div class="card-body">
+                      <a href="/productdetail/{{product.id}}" style="text-decoration: none;" ><h5 class="card-title" style="font-weight:bolder; color: black;">{{product.name}}</h5></a>
+                         
+                       <p class="card-text mb-2 mt-5">{{product.price}}</p>
+                       
+                       
+                     </div>
+                   </div>
+                 </div>
+                 {% endfor %}
+               </div>
+             </div>
+           </div>
+         </div>
+     
+         {% endblock 'content' %}     

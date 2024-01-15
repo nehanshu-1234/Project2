@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block 'content' %}
+{% load static %}
+<div class="container">
+
+    <div class="row">
+        {% for product in products %}
+            <div class="col-md-4 mb-5 mt-5 mx-auto">
+            <div class="card h-100 w-100 ">
+                    <img class="img-fluid" src="{{product.pid.pimage.url}}" alt="">
+
+                <div class="card-body">
+                   <a href="/productdetail/{{product.id}}" style="text-decoration: none;" ><h5 class="card-title" style="font-weight:bolder; color: black;">{{product.name}}</h5></a>
+                   <p><strong>Name: {{product.pid.name}}</strong></p>
+                   <p><strong>Price: {{product.pid.price}}</strong></p>
+                </div> 
+            </div>   
+
+            
+                      
+    </div>
+    {% endfor %}  
+
+            
+    
+<!-- 
+    <div class="row">
+        <div class="col-md-6"> -->
+         <p><strong>Total: Rs.{{ sum }}</strong></p>
+         <a href="/makepayment" style="text-decoration: none;"> <button class="form-control" style="background-color: #AD430E; color: white;">Pay</button></a>
+        <!-- </div>
+    </div> -->
+</div>
+
+    
+
+
+      {% endblock 'content' %}
+
+ 
+      
